@@ -1,4 +1,5 @@
 import * as flsFunctions from './modules/functions.js';
+import './header.js';
 
 flsFunctions.testWebP(function (support) {
     

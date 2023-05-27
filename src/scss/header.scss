@@ -1,3 +1,241 @@
 .header {
-    padding: 40px 0;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
+
+    @media screen and (max-width: 1440px) {
+        padding: 24px 0;
+    };
+
+    @media screen and (max-width: $Large-s) {
+        padding: 20px 0;
+    }
+    &.active {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        @media screen and (max-width: 1440px) {
+            max-width: 154px;
+            width: 100%;
+        };
+        @media screen and (max-width: 1300px) {
+            max-width: 143px;
+        };
+    }
+    & .nav {
+        @media screen and (max-width: $Large-s) {
+            display: none;
+        };
+    }
+    &.active .nav {
+        @media screen and (max-width: 1200px) {
+            position: fixed;
+            top: 89px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
+            display: block;
+        }
+        @media screen and (max-width: 1200px) {
+            overflow: auto;
+        };
+    }
+    
+    & .nav__items {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $Large-s) {
+            align-items: flex-start;
+        };
+       
+    }
+    &.active .nav__items {
+        @media screen and (max-width: $Large-s) {
+            flex-direction: column;
+            padding: 10px 0px;
+        }
+    }
+    & .nav__item {
+        position: relative;
+
+        @media screen and (max-width: $Large-s) {
+            padding: 15px 10px;
+            width: 100%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        } 
+
+        a {
+            font-family: 'SF Pro Display';
+            font-weight: 400;
+            line-height: 1.187;
+            color: #111111;
+            position: relative;
+            display: inline-block;
+            padding: 10px 10px;
+
+            &.active {
+                display: block;
+                padding: 15px 10px;
+                background: #D9E2FF;
+                text-align: center; 
+                border-radius: 25px;
+
+                @media screen and (min-width: 1199px) {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -29px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #1F50FE;
+                    }
+                }
+
+                @media screen and (min-width: 1440px) {
+                    &::after {
+                        bottom: -42px;
+                    }
+                
+                };
+            }
+
+            @media screen and (max-width: 1200px) {
+                display: block;
+                padding: 10px 20px;
+                padding: 15px 10px;
+                background: #D9E2FF;
+                max-width: 200px;  
+                text-align: center;  
+                border-radius: 25px;        
+            }
+        }
+    }
+    
+    &__contacts {
+        @media screen and (max-width: $Large-s) {
+           display: none;
+        } 
+        .header.active & {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+    &__contacts-inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__contacts-image {
+        width: 18px;
+        height: 18px;
+        margin-right: 11px;
+    }
+    &__contacts-link {
+        font-family: 'SF Pro Display';
+        font-weight: 500;
+        line-height: 1.187;
+        color: #111111;
+    }
+    &__button {
+        display: block;
+        position: absolute;
+        margin-left: 30px;
+        border: none;
+        background: none;
+        font-family: 'SF Pro Display';
+        font-weight: 400;
+        line-height: 1.187;
+        text-transform: uppercase;
+        color:  #1F50FE;
+        cursor: pointer;
+    }
+    &__item_right {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: $Large-s) {
+            display: none;
+        };
+    }
+    &__item-image {
+        width: 19px;
+        height: 19px;
+        margin-right: 11px;
+    }
+    &__burger {
+        display: none;
+        width: 48px;
+        height: 48px;
+        padding: 18px 15px;
+        border-radius: 20px;
+        background: #D9E2FF;
+        cursor: pointer;
+
+        @media screen and (max-width: $Large-s) {
+            display: block;
+        }; 
+    }
+
+    &__burger-inner {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        &::before,&::after,& span {
+            height: 2px;
+            transition: all 0.2s;
+        }
+        &::before,&::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: #111111;
+        }
+        &::before {
+            top: 0;
+            .header__burger.active & {
+                transform: rotate(-45deg) translate(-3px, 4px);
+            }
+        }
+        &::after {
+            bottom: 0;
+            .header__burger.active & {
+                transform: rotate(45deg) translate(-3px, -4px);
+            }
+        }
+
+        & span {
+            display: block;
+            position: relative;
+            width: 100%;
+            background: #111111;
+            // transition: all 0.2s;
+
+            .header__burger.active & {
+                width: 0;
+            }
+        }
+    }
 }
