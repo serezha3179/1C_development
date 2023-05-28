@@ -4,7 +4,7 @@
 @import 'fonts.scss';
 @import 'header.scss';
 @import 'footer.scss';
-
+//common style
 body {
     font-family: 'SF Pro Display';
     font-size: 18px;
@@ -19,12 +19,22 @@ body {
        font-size: 14px; 
     };
 }
+section {
+   border-radius: 100px 100px 0 0;
+
+   @media screen and (max-width: 1440px) {
+      border-radius: 50px 50px 0 0;
+   }
+   @media screen and (max-width: $Medium-s) {
+      border-radius: 30px 30px 0 0;
+   }
+}
 //button top
 .button-top {
    display: block;
    position: fixed;
    bottom: 5%;
-   right: 10%;
+   right: 5%;
    width: 64px;
    height: 64px;
    border-radius: 50%;
@@ -32,17 +42,21 @@ body {
    background: white url('../img/button-top.png')no-repeat 50% 50%;
 
    @media screen and (max-width: $Small-l) {
-      width: 54px;
-      height: 54px;
+      width: 44px;
+      height: 44px;
    }
 }
 //section group
 .group {
    padding: 50px 0px;
+   border-radius: 0;
    background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
 
    @media screen and (max-width: 1600px) {
-      padding: 50px 0px;
+      padding: 50px 0;
+   }
+   @media screen and (max-width: $Medium-l) {
+      padding: 50px 0 0;
    }
 
    &__wrapper {
@@ -106,3 +120,116 @@ body {
    }
 }
 // section services
+.services {
+   padding: 72px 0;
+   background: linear-gradient(72.05deg, #E6EFFF 12.23%, #D9E1FF 50.72%, #CBD2FF 88.67%);
+
+   &__title {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.193;
+      margin-bottom: 30px;
+   }
+
+   &__text {
+         margin-bottom: 30px;
+   }
+
+   &__cards {
+      gap: 22px;
+      display: flex;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: 800px) {
+         flex-direction: column;
+      }
+   }
+
+   &__card {
+      position: relative;
+      padding: 24px 24px 32px 24px;
+      background: #ffffff;
+      box-shadow: 0px 100px 80px rgba(31, 80, 254, 0.03), 0px 64.8148px 46.8519px rgba(31, 80, 254, 0.0227778), 0px 38.5185px 25.4815px rgba(31, 80, 254, 0.0182222), 0px 20px 13px rgba(31, 80, 254, 0.015), 0px 8.14815px 6.51852px rgba(31, 80, 254, 0.0117778), 0px 1.85185px 3.14815px rgba(31, 80, 254, 0.00722222);
+
+      &:nth-child(1) {
+         border-radius: 30px 0 0 0;
+      }
+      &:nth-child(3) {
+         border-radius: 0 0 30px 0;
+      }
+
+      &:nth-child(-n+3) {
+         @media screen and (max-width: $Medium-l) {
+            border-radius: 30px 0 0 0;
+         }
+      }
+   }
+
+   &__card-title {
+      margin-bottom: 60px;
+      
+      .services__card:first-child & {
+            @media screen and (max-width: 1680px) {
+               max-width: 170px;
+               margin-bottom: 20px;
+            }
+      }
+      .services__card:nth-child(-n+3) & {
+         @media screen and (max-width: 1560px) {
+               max-width: 160px;
+               margin-bottom: 20px;
+            }
+         @media screen and (max-width: 800px) {
+            max-width: 100%;
+         }
+         @media screen and (max-width: $Small) {
+            max-width: 160px;
+         }
+      }
+   }
+
+   &__card-image {
+      position: absolute;
+      top: 13px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+
+      @media screen and (max-width: 1560px) {
+         top: 25px;
+
+      }
+
+      @media screen and (max-width: 1440px) {
+         width: 50px;
+         height: 50px;
+      }
+
+      @media screen and (max-width: 1280px) {
+         width: 40px;
+         height: 40px;
+      }
+   }
+
+   &__button {
+      display: block;
+      max-width: calc((100% / 3) - 22px);
+      width: 100%;
+      padding: 18px 0;
+      color: #ffffff;
+      background: #1F50FE;
+      border: none;
+      margin: 0 auto;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      @media screen and (max-width: $Medium) {
+         max-width: 270px;
+      }
+
+      @media screen and (max-width: 800px) {
+         max-width: 100%;
+      }
+   }
+}
+//section expertise
