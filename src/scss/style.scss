@@ -1,7 +1,7 @@
 @import 'reset.scss';
+@import 'variables.scss';
 @import 'global.scss';
 @import 'fonts.scss';
-@import 'variables.scss';
 @import 'header.scss';
 @import 'footer.scss';
 
@@ -15,7 +15,94 @@ body {
        font-size: 16px;
     };
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1300px) {
        font-size: 14px; 
     };
 }
+//button top
+.button-top {
+   display: block;
+   position: fixed;
+   bottom: 5%;
+   right: 10%;
+   width: 64px;
+   height: 64px;
+   border-radius: 50%;
+   border: 1px solid #1F50FE;
+   background: white url('../img/button-top.png')no-repeat 50% 50%;
+
+   @media screen and (max-width: $Small-l) {
+      width: 54px;
+      height: 54px;
+   }
+}
+//section group
+.group {
+   padding: 50px 0px;
+   background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
+
+   @media screen and (max-width: 1600px) {
+      padding: 50px 0px;
+   }
+
+   &__wrapper {
+      display: flex;
+
+      @media screen and (max-width: $Medium-l) {
+         flex-direction: column;
+      }
+   }
+
+   &__items {
+      &:first-child {
+         @media screen and (max-width: $Medium-l) {
+            margin-bottom: 50px;
+         }
+      }
+      
+   }
+
+   &__title {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #1F50FE;
+      margin-bottom: 24px;
+
+      @media screen and (max-width: 1440px) {
+         font-size: 60px;
+         line-height: 1.119;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 40px;
+         line-height: 1.193;
+      }
+      @media screen and (max-width: $Small-s) {
+         font-size: 30px;
+      }
+   }
+
+   &__text {
+      max-width: 900px;
+      margin-bottom: 30px;
+
+      &:nth-of-type(2) {
+         margin-bottom: 70px;
+         @media screen and (max-width: $Small-l) {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   &__images {
+      display: flex;
+      @media screen and (max-width: $Small-l) {
+         display: none;
+      }
+   }
+
+   &__image {
+      margin-right: 52px;
+   }
+}
+// section services
