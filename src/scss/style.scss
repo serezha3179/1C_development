@@ -20,13 +20,43 @@ body {
     };
 }
 section {
+   position: relative;
+   padding: 80px 0 150px;
    border-radius: 100px 100px 0 0;
+   margin-top: -100px;
 
    @media screen and (max-width: 1440px) {
       border-radius: 50px 50px 0 0;
+      padding: 64px 0 100px;
+      margin-top: -60px;
+   }
+   @media screen and (max-width: 1280px) {
+      padding: 56px 0 100px;
+      margin-top: -60px;
    }
    @media screen and (max-width: $Medium-s) {
       border-radius: 30px 30px 0 0;
+   }
+}
+.title {
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 1.5;
+
+   @media screen and (max-width: 1440px) {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.193;
+   }
+   @media screen and (max-width: 1280px) {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.193;
+   }
+   @media screen and (max-width: $Small-l) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.193;
    }
 }
 //button top
@@ -38,8 +68,8 @@ section {
    width: 64px;
    height: 64px;
    border-radius: 50%;
-   border: 1px solid #1F50FE;
-   background: white url('../img/button-top.png')no-repeat 50% 50%;
+   border: 1px solid $blue;
+   background: $white url('../img/button-top.png')no-repeat 50% 50%;
 
    @media screen and (max-width: $Small-l) {
       width: 44px;
@@ -48,16 +78,9 @@ section {
 }
 //section group
 .group {
-   padding: 50px 0px;
+   margin-top: 0;
    border-radius: 0;
    background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
-
-   @media screen and (max-width: 1600px) {
-      padding: 50px 0;
-   }
-   @media screen and (max-width: $Medium-l) {
-      padding: 50px 0 0;
-   }
 
    &__wrapper {
       display: flex;
@@ -73,14 +96,13 @@ section {
             margin-bottom: 50px;
          }
       }
-      
    }
 
    &__title {
       font-size: 72px;
       font-weight: 700;
       line-height: 1.5;
-      color: #1F50FE;
+      color: $blue;
       margin-bottom: 24px;
 
       @media screen and (max-width: 1440px) {
@@ -121,13 +143,10 @@ section {
 }
 // section services
 .services {
-   padding: 72px 0;
+   // position: relative;
    background: linear-gradient(72.05deg, #E6EFFF 12.23%, #D9E1FF 50.72%, #CBD2FF 88.67%);
 
    &__title {
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1.193;
       margin-bottom: 30px;
    }
 
@@ -147,8 +166,9 @@ section {
 
    &__card {
       position: relative;
+      flex: 0 1 33.33%;
       padding: 24px 24px 32px 24px;
-      background: #ffffff;
+      background: $white;
       box-shadow: 0px 100px 80px rgba(31, 80, 254, 0.03), 0px 64.8148px 46.8519px rgba(31, 80, 254, 0.0227778), 0px 38.5185px 25.4815px rgba(31, 80, 254, 0.0182222), 0px 20px 13px rgba(31, 80, 254, 0.015), 0px 8.14815px 6.51852px rgba(31, 80, 254, 0.0117778), 0px 1.85185px 3.14815px rgba(31, 80, 254, 0.00722222);
 
       &:nth-child(1) {
@@ -216,8 +236,8 @@ section {
       max-width: calc((100% / 3) - 22px);
       width: 100%;
       padding: 18px 0;
-      color: #ffffff;
-      background: #1F50FE;
+      color: $white;
+      background: $blue;
       border: none;
       margin: 0 auto;
       text-transform: uppercase;
@@ -233,3 +253,143 @@ section {
    }
 }
 //section expertise
+.expertise {
+   background: linear-gradient(67.66deg, #D01C28 -18.98%, #1F50FE 17%, #899AFF 108.07%);
+ 
+   &-container {
+      max-width: 1920px;
+      padding: 0 72px;
+      margin: 0 auto;
+
+      @media screen and (max-width: $Large-l) {
+          padding: 0 56px;
+      }
+      @media screen and (max-width: 1500px) {
+          padding: 0 40px;
+      }
+      @media screen and (max-width: $Medium-l) {
+          padding: 0 16px;
+      }
+  }
+
+   &__title {
+      color: $white;
+      margin-bottom: 40px;
+      padding-left: 30px;
+
+      @media screen and (max-width: 1440px) {
+         padding-left: 0;
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(5, minmax(180px, 1fr));
+      gap: 16px;
+
+      @media screen and (max-width: $Medium-l) {
+         grid-template-rows: repeat(5, auto);
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 374px) {
+         grid-template-rows: repeat(10, auto);
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+
+   &__card {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
+
+      @media screen and (max-width: 1280px) {
+         padding: 20px;
+      }
+      @media screen and (max-width: $Small-l) {
+         padding: 16px;
+      }
+
+      &:nth-child(1) {
+         background: $white;
+         border-radius: 0;
+      }
+      &:nth-child(2) {
+         border-radius: 0 0 25px 0;
+      }
+      &:nth-child(3) {
+         border-radius: 25px 25px 0 25px;
+      }
+      &:nth-child(4) {
+         border-radius: 0 25px 25px 0;
+      }
+      &:nth-child(5) {
+         border-radius: 25px 25px 25px 25px;
+      }
+      &:nth-child(6) {
+         border-radius: 25px 25px 0 25px;
+      }
+      &:nth-child(7) {
+         border-radius: 0 25px 0 25px;
+      }
+      &:nth-child(9) {
+         border-radius: 25px 0 0 0;
+      }
+      &:nth-child(10) {
+         border-radius: 0 25px 0 0;
+      }
+      @media screen and (max-width: $Small-l) {
+         &:nth-child(-n+10) {
+            border-radius: 0 20px 0 0;
+         }
+         &:nth-child(1) {
+            border-radius: 0 0 20px 0;
+         }
+      }
+   }
+
+   &__card-image {
+      display: block;
+      width: 82px;
+      height: 40px;
+      margin-bottom: 16px;
+      fill: $white;
+
+      @media screen and (max-width: $Small-l) {
+         width: 65px;
+         height: 32px;
+      }
+
+      .expertise__card:first-child & {
+         fill: $red;
+      }
+   }
+
+   &__text {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $white;
+
+      .expertise__card:first-child & {
+         font-weight: 700;
+      }
+      
+      @media screen and (max-width: 1440px) {
+         font-size: 22px;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 18px;
+         font-weight: 500;
+      }
+      @media screen and (max-width: $Small-l) {
+         font-size: 16px;
+         font-weight: 500;
+      }
+
+      .expertise__card:first-child & {
+         color: $blue;
+      }
+   }
+}
+// section advantages
