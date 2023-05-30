@@ -257,6 +257,7 @@ section {
 }
 //section expertise
 .expertise {
+   position: relative;
    background: linear-gradient(67.66deg, #D01C28 -18.98%, #1F50FE 17%, #899AFF 108.07%);
  
    &-container {
@@ -397,6 +398,7 @@ section {
 }
 // section advantages
 .advantages {
+   padding-bottom: 180px;
    background: linear-gradient(72.05deg, #E6EFFF 12.23%, #D9E1FF 50.72%, #CBD2FF 88.67%);
    &__title {
       margin-bottom: 32px;
@@ -404,6 +406,7 @@ section {
 
    &__items {
       display: flex;
+      margin-bottom: 100px;
 
       @media screen and (max-width: $Medium-l) {
          flex-direction: column;
@@ -509,3 +512,98 @@ section {
    }
 }
 // section consultation
+.consultation {
+   position: relative;
+   width: 100%;
+   padding: 80px 0;
+   border-radius: 0;
+   background: linear-gradient(92.49deg, #1A233B 0%, #01278E 185.36%);
+
+   @media screen and (max-width: 1440px) {
+      margin-top: -60px;
+      padding: 64px 0;
+   }
+   @media screen and (max-width: $Medium-l) {
+      position: static;
+      margin-top: 0px;
+      padding: 56px 0;
+   }
+
+   &__title {
+      position: relative;
+      z-index: 1;
+      color: $white;
+      margin-bottom: 35px;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+
+      @media screen and (max-width: $Medium-l) {
+         flex-direction: column-reverse;
+      }
+   }
+
+   &__item {
+      &:last-child {
+         position: absolute;
+         right: -30px;
+         top: 50%;
+         transform: translateY(-50%);
+         z-index: 0;
+
+         & img {
+            max-width: 465px;
+            width: 100%;
+            height: 308px;
+
+            @media screen and (max-width: 1440px) {
+               max-width: 433px;
+               height: 287px;
+            }
+            @media screen and (max-width: 1440px) {
+               max-width: 381px;
+               height: 253px;
+            }
+            @media screen and (max-width: $Medium-l) {
+               max-width: auto;
+               height: auto;
+            }
+         }
+
+         @media screen and (max-width: $Medium-l) {
+            position: static;
+            transform: translateY(0);
+            margin-bottom: 32px;
+         }
+      }
+      &:first-child {
+         position: relative;
+         top: 0;
+         left: 0;
+         z-index: 1;
+
+         @media screen and (max-width: $Medium-l) {
+            position: static;
+            z-index: 0;
+         }
+      }
+   }
+
+   &__text {
+      max-width: 720px;
+      color: $white;
+      margin-bottom: 32px;
+   }
+
+   &__button {
+      max-width: 400px;
+      width: 100%;
+      padding: 13px;
+      text-transform: uppercase;
+      color: $white;
+      border: none;
+      background: $blue;
+   }
+}
