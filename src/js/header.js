@@ -2,6 +2,7 @@ if(document.querySelector('header')) {
     const header = document.querySelector('.header');
     const headerBurger = document.querySelector('.header__burger');
     const navigation = document.querySelectorAll('.nav__link');
+    const body = document.querySelector('body');
 
     navigation.forEach(item=>item.addEventListener('click', (e)=> {
         e.preventDefault();
@@ -12,5 +13,6 @@ if(document.querySelector('header')) {
     headerBurger.addEventListener('click', ()=>{
         headerBurger.classList.toggle('active');
         header.classList.toggle('active');
+        body.classList.toggle('lock');
     });
 }

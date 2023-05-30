@@ -13,11 +13,15 @@ body {
 
     @media screen and (max-width: 1440px) {
        font-size: 16px;
-    };
+    }
 
     @media screen and (max-width: 1300px) {
        font-size: 14px; 
-    };
+    }
+
+    &.lock {
+      overflow: hidden;
+    }
 }
 section {
    position: relative;
@@ -143,7 +147,6 @@ section {
 }
 // section services
 .services {
-   // position: relative;
    background: linear-gradient(72.05deg, #E6EFFF 12.23%, #D9E1FF 50.72%, #CBD2FF 88.67%);
 
    &__title {
@@ -393,3 +396,116 @@ section {
    }
 }
 // section advantages
+.advantages {
+   background: linear-gradient(72.05deg, #E6EFFF 12.23%, #D9E1FF 50.72%, #CBD2FF 88.67%);
+   &__title {
+      margin-bottom: 32px;
+   }
+
+   &__items {
+      display: flex;
+
+      @media screen and (max-width: $Medium-l) {
+         flex-direction: column;
+         position: relative;
+      }
+   }
+
+   &__item {
+      width: 50%;
+
+      @media screen and (max-width: $Medium-l) {
+         width: 100%;
+         margin-bottom: 20px;
+      }
+
+      &:first-child {
+         position: relative;
+         padding-right: 20px;
+         padding-bottom: 70px;
+
+         @media screen and (max-width: $Medium-l) {
+            position: static;
+            padding-bottom: 0;
+         }
+      }
+   }
+   &__paragraf {
+      margin-bottom: 20px;
+      }
+   &__card {
+      display: flex;
+      align-items: center;
+      background: $white;
+      border-radius: 60px 0 0 60px;
+      margin-bottom: 16px;
+      padding-right: 20px;
+      @media screen and (max-width: $Small-s) {
+         padding: 8px 8px 8px 0;
+      }
+   }
+   &__card-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 1px solid $grey;
+      background: $white;
+      margin-right: 24px;
+
+      @media screen and (max-width: 1700px) {
+         width: 100px;
+         height: 100px;
+      }
+      @media screen and (max-width: 1280px) {
+         width: 80px;
+         height: 80px;
+      }
+   }
+   &__card-img {
+      width: 60px;
+      height: 60px;
+      @media screen and (max-width: 1700px) {
+         width: 40px;
+         height: 40px;
+      }
+   }
+   &__card-title {
+      margin-bottom: 8px;
+      
+      @media screen and (max-width: $Small-l) {
+         line-height: 1.19;
+      }
+   }
+   &__card-text {
+      @media screen and (max-width: 1700px) {
+         font-size: 14px;
+         line-height: 1.33;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 12px;
+      }
+   }
+   &__button {
+      position: absolute;
+      bottom: 0;
+      max-width: 452px;
+      width: 100%;
+      background: $blue;
+      text-transform: uppercase;
+      border-radius: 0 50px 50px 0;
+      padding: 18px;
+      border: none;
+      color: $white;
+
+      @media screen and (max-width: $Medium-l) {
+         border-radius: 50px 0 0 50px;
+         bottom: -50px;
+         max-width: 100%;
+      }
+   }
+}
+// section consultation

@@ -1,6 +1,7 @@
 .header {
     padding: 32px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 100;
     background: linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
 
     @media screen and (max-width: 1440px) {
@@ -61,7 +62,7 @@
             left: 0px;
             height: 100%;
             flex-direction: column;
-            background: linear-gradient(296.95deg, rgba(255, 255, 255, 1) 15.52%, rgba(233, 241, 255, 1) 95.06%);
+            background: $white linear-gradient(296.95deg, rgba(255, 255, 255, 0.5) 15.52%, rgba(233, 241, 255, 0.5) 95.06%);
             overflow-y: auto;
         }
         
@@ -112,8 +113,8 @@
                 right: 28px;
                 width: 20px;
                 height: 20px;
-                border-top: 3px solid black;
-                border-right: 3px solid black;
+                border-top: 3px solid $black;
+                border-right: 3px solid $black;
             }
         } 
 
@@ -121,7 +122,7 @@
             font-family: 'SF Pro Display';
             font-weight: 400;
             line-height: 1.187;
-            color: #111111;
+            color: $black;
             position: relative;
             display: inline-block;
             padding: 10px 10px;
@@ -130,7 +131,7 @@
                 display: block;
                 padding: 10px 20px;
                 padding: 15px 10px;
-                background: #D9E2FF;
+                background: $lightblue;
                 max-width: 200px;  
                 text-align: center;  
                 border-radius: 25px;   
@@ -140,7 +141,7 @@
             &.active {
                 display: block;
                 padding: 15px 10px;
-                background: #D9E2FF;
+                background: $lightblue;
                 text-align: center; 
                 border-radius: 25px;
 
@@ -154,7 +155,7 @@
                         width: 10px;
                         height: 10px;
                         border-radius: 50%;
-                        background: #1F50FE;
+                        background: $blue;
                     }
                 }
 
@@ -199,7 +200,7 @@
         font-family: 'SF Pro Display';
         font-weight: 500;
         line-height: 1.187;
-        color: #111111;
+        color: $black;
     }
     &__button {
         display: block;
@@ -211,7 +212,7 @@
         font-weight: 400;
         line-height: 1.187;
         text-transform: uppercase;
-        color:  #1F50FE;
+        color:  $blue;
         cursor: pointer;
     }
     &__item_right {
@@ -245,7 +246,7 @@
         height: 48px;
         padding: 18px 15px;
         border-radius: 20px;
-        background: #D9E2FF;
+        background: $lightblue;
         cursor: pointer;
 
         @media screen and (max-width: $Large-s) {
@@ -271,7 +272,7 @@
             position: absolute;
             left: 0;
             width: 100%;
-            background: #111111;
+            background: $black;
         }
         &::before {
             top: 0;
@@ -290,7 +291,7 @@
             display: block;
             position: relative;
             width: 100%;
-            background: #111111;
+            background: $black;
 
             .header__burger.active & {
                 width: 0;
