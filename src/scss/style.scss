@@ -75,6 +75,12 @@ section {
    padding: 12px;
    border: none;
    cursor: pointer;
+   @media screen and (max-width: 1440px) {
+      padding: 18px;
+   }
+   @media screen and (max-width: 1280px) {
+      padding: 16px;
+   }
 }
 //button top
 .button-top {
@@ -829,3 +835,92 @@ section {
    }
 }
 //solutions
+.solutions {
+   background: linear-gradient(92.49deg, #1A233B 0%, #01278E 185.36%);
+   &__title {
+      color: $white;
+      margin-bottom: 32px;
+   }
+
+   &__paragraph {
+      color: $white;
+      margin-bottom: 60px;
+   }
+
+   &__item { 
+      display: flex;
+      border-radius: 40px 40px 0 40px;
+      padding: 40px;
+      padding-bottom: 100px;
+      margin-top: -55px;
+      margin-left: auto;
+
+      @media screen and (max-width: 1440px) {
+         margin-top: -40px;
+         padding: 32px;
+         padding-bottom: 60px;
+      }
+      @media screen and (max-width: 1440px) {
+         margin-top: -40px;
+         padding: 24px;
+         padding-bottom: 77px;
+      }
+      @media screen and (max-width: $Small-l) {
+         flex-direction: column;
+         margin-top: -20px;
+         padding: 16px;
+         padding-bottom: 32px;
+         border-radius: 30px;
+      }
+
+      &:nth-of-type(1) {
+         margin-top: 0;
+         background: #D8DDFF;
+      }
+      &:nth-of-type(2) {
+         width: 95%;
+         background: #E9ECFF;
+      }
+      &:nth-of-type(3) {
+         width: 90%;
+         margin-bottom: 50px;
+         background: $white;
+         border-radius: 40px 40px 40px 40px;
+
+         @media screen and (max-width: $Small-l) {
+            border-radius: 30px;
+            margin-bottom: 32px;
+         }
+      }
+   }
+
+   &__item-title {
+      max-width: 40%;
+      width: 100%;
+      margin-right: 50px;
+
+      @media screen and (max-width: $Small-l) {
+         max-width: 100%;
+         margin-right: 0;
+         margin-bottom: 8px;
+      }
+   }
+   &__button {
+      max-width: 612px;
+      border-radius: 40px;
+      margin-left: auto;
+      margin-right: 0;
+      padding: 18px;
+
+      @media screen and (max-width: 1440px) {
+         max-width: 564px;
+      }
+      @media screen and (max-width: 1280px) {
+         max-width: 400px;
+      }
+      @media screen and (max-width: $Small-l) {
+         max-width: 295px;
+      }
+   }
+}
+//description
