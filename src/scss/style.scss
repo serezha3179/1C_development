@@ -10,6 +10,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
+    color: $black-main;
 
     @media screen and (max-width: 1440px) {
        font-size: 16px;
@@ -62,6 +63,18 @@ section {
       font-weight: 700;
       line-height: 1.193;
    }
+}
+.button {
+   display: block;
+   max-width: 400px;
+   width: 100%;
+   margin: 0 auto;
+   text-transform: uppercase;
+   color: $white;
+   background: $blue;
+   padding: 12px;
+   border: none;
+   cursor: pointer;
 }
 //button top
 .button-top {
@@ -235,16 +248,8 @@ section {
    }
 
    &__button {
-      display: block;
-      max-width: calc((100% / 3) - 22px);
-      width: 100%;
+      max-width: 32.5%;
       padding: 18px 0;
-      color: $white;
-      background: $blue;
-      border: none;
-      margin: 0 auto;
-      text-transform: uppercase;
-      cursor: pointer;
 
       @media screen and (max-width: $Medium) {
          max-width: 270px;
@@ -433,7 +438,7 @@ section {
          }
       }
    }
-   &__paragraf {
+   &__paragraph {
       margin-bottom: 20px;
       }
    &__card {
@@ -496,13 +501,8 @@ section {
       position: absolute;
       bottom: 0;
       max-width: 452px;
-      width: 100%;
-      background: $blue;
-      text-transform: uppercase;
       border-radius: 0 50px 50px 0;
       padding: 18px;
-      border: none;
-      color: $white;
 
       @media screen and (max-width: $Medium-l) {
          border-radius: 50px 0 0 50px;
@@ -598,13 +598,7 @@ section {
    }
 
    &__button {
-      max-width: 400px;
-      width: 100%;
-      padding: 13px;
-      text-transform: uppercase;
-      color: $white;
-      border: none;
-      background: $blue;
+      margin: 0;
    }
 }
 // section outstaffing
@@ -614,7 +608,7 @@ section {
       margin-bottom: 32px;
    }
 
-   &__paragraf {
+   &__paragraph {
       margin-bottom: 60px;
       @media screen and (max-width: $Small-l) {
          margin-bottom: 20px;
@@ -677,6 +671,7 @@ section {
       background: #F1F1F1;
       border: 1px solid #B7B7B7;
       margin-right: 24px;
+      box-shadow: 0px 50px 100px 5px rgba(31, 80, 254, 0.2);
 
       @media screen and (max-width: 1440px) {
          width: 100px;
@@ -719,16 +714,118 @@ section {
    }
 
    &__button {
-      display: block;
-      max-width: 442px;
+      max-width: 36%;
       width: 100%;
-      margin: 0 auto;
-      text-transform: uppercase;
-      color: $white;
-      background: $blue;
-      padding: 12px;
-      border: none;
-      cursor: pointer;
+      box-shadow: 0px 50px 100px 5px rgba(31, 80, 254, 0.2);
+
+      @media screen and (max-width: 800px) {
+         max-width: 48%;
+      }
+      @media screen and (max-width: $Small-l) {
+         max-width: 100%;
+      }
+
    }
 }
 //modules
+.modules {
+   background: linear-gradient(89.37deg, #EFF1F4 0.54%, #FDFAFA 46.55%, #FFF5F6 99.5%);
+   &__title {
+      margin-bottom: 32px;
+   }
+
+   &__paragraph {
+      margin-bottom: 60px;
+   }
+
+   &__items {
+      max-width: 1380px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto 60px;
+      gap: 4.4%;
+
+      @media screen and (max-width: 1440px) {
+         max-width: 100%;
+      }
+      @media screen and (max-width: 1440px) {
+         gap: 2.2%;
+      }
+      @media screen and (max-width: $Medium-s) {
+         flex-direction: column;
+         margin-bottom: 30px;
+      }
+   }
+
+   &__item {
+      flex: 0 0 28.9%;
+      padding: 32px;
+      background: $white;
+      box-shadow: 0px 50px 100px 5px rgba(31, 80, 254, 0.2);
+
+      @media screen and (max-width: 1440px) {
+         flex: 0 0 30%;
+         padding: 24px;
+      }
+      @media screen and (max-width: $Medium-s) {
+         margin-bottom: 24px;
+      }
+
+      &:nth-child(2) {
+         border-radius: 0 60px 0 60px;
+      }
+   }
+
+   &__item-number {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.5;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #D01C28;
+
+      @media screen and (max-width: 1440px) {
+         padding-bottom: 16px;
+         margin-bottom: 16px;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 28px;
+      }
+      @media screen and (max-width: $Medium-s) {
+         padding-bottom: 8px;
+      }
+   }
+
+   &__item-title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.19;
+      margin-bottom: 24px;
+
+      @media screen and (max-width: 1440px) {
+         font-size: 22px;
+         margin-bottom: 16px;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 18px;
+      }
+   }
+
+   &__item-paragraph {
+      font-size: 16px;
+
+      @media screen and (max-width: 1440px) {
+         font-size: 14px;
+      }
+      @media screen and (max-width: 1280px) {
+         font-size: 12px;
+      }
+   }
+
+   &__button {
+      border-radius: 20px 0 20px 0;
+      box-shadow: 0px 50px 100px 5px rgba(31, 80, 254, 0.2);
+   }
+}
+//solutions
