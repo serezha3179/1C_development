@@ -3,6 +3,7 @@
 @import 'global.scss';
 @import 'fonts.scss';
 @import 'header.scss';
+@import 'partners_slider.scss';
 @import 'footer.scss';
 //common style
 body {
@@ -84,7 +85,7 @@ section {
 }
 //button top
 .button-top {
-   display: block;
+   display: none;
    position: fixed;
    bottom: 5%;
    right: 5%;
@@ -93,6 +94,11 @@ section {
    border-radius: 50%;
    border: 1px solid $blue;
    background: $white url('../img/button-top.png')no-repeat 50% 50%;
+   cursor: pointer;
+   
+   &.scroll {
+      display: block;
+   }
 
    @media screen and (max-width: $Small-l) {
       width: 44px;
@@ -948,6 +954,14 @@ section {
       margin-bottom: 39px;
    }
 
+   &__items-wrapper {
+      display: flex;
+
+      @media screen and (max-width: $Medium) {
+         flex-direction: column;
+      }
+   }
+
    &__item {
       width: 50%;
      
@@ -1034,3 +1048,16 @@ section {
    }
 }
 // partners
+.partners {
+   background: linear-gradient(72.05deg, #CBD2FF 12.23%, #D9E1FF 50.72%, #E6EFFF 88.67%);
+
+   &__title {
+      margin-bottom: 80px;
+      // margin-bottom: 40px;
+
+      @media screen and (max-width: $Medium) {
+         margin-bottom: 32px;
+      }
+   }
+}
+// price
