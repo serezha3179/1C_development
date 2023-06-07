@@ -5,6 +5,7 @@ import './jquery-3.7.0.min.js';
 import './slick.min.js';
 import './partners_slider.js';
 import './button-top.js';
+import './price-form.js';
 
 flsFunctions.testWebP(function (support) {
     

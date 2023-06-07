@@ -325,7 +325,7 @@
         </section>
         <section class="partners">
           <div class="container">
-            <div class="partners__title title">Наши партнеры</div>
+            <h2 class="partners__title title">Наши партнеры</h2>
             <div class="partners__slider">
               <div class="partners__slide">
                 <div class="partners__slide-image">
@@ -391,7 +391,108 @@
           </div>
         </section>
         <section class="price">
-          
+          <div class="price__items">
+              <div class="price__item price__item_left">
+                <div class="price-container_left">
+                <h2 class="price__item-title title">Посчитать стоимость</h2>
+                <p class="price__item-paragraph">Для наилучшей обработки вашего запроса, пожалуйста, выберите необходимые параметры.</p>
+                <form action="index.html" class="price__form">
+                  <h3 class="price__form-title">1. Выберете услугу</h3>
+                  <div class="price__form-items">
+                    <label for="outstaffing" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="outstaffing">
+                      Аутстаффинг 1С специалистов
+                    </label>
+                    
+                    <label for="development" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="development">
+                      Разработка 1С модулей
+                    </label>
+                    
+                    <label for="solutions" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="solutions">
+                      Внедрение решений 1С в предприятие
+                    </label>
+                  </div>
+                  <h3 class="price__form-title">2. Команда</h3>
+                  <div class="price__form-items">
+                    <label for="developers" class="price__form-item">
+                      <button id="buttonMinus">-</button>
+                      <input type="text" value="0" id="developers">
+                      <button id="buttonPlus">+</button>
+                      <span>Разработчики 1С</span>
+                    </label>
+                    <label for="architects" class="price__form-item">
+                      <button id="buttonMinus">-</button>
+                      <input type="text" value="0" id="architects">
+                      <button id="buttonPlus">+</button>
+                      <span>Архитекторы 1С</span>
+                    </label>
+                    <label for="analysts" class="price__form-item">
+                      <button id="buttonMinus">-</button>
+                      <input type="text" value="0" id="analysts">
+                      <button id="buttonPlus">+</button>
+                      <span>Аналитики 1С</span>
+                    </label>
+                  </div>
+                  <h3 class="price__form-title">3. Продукты в системе 1С:Предприятие</h3>
+                  <div class="price__form-items">
+                    <label for="1" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="1">
+                      Управление нашей фирмой
+                    </label>
+                    <label for="2" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="2">
+                      Управление торговлей (CRM)
+                    </label>
+                    <label for="3" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="3">
+                      Бухгалтерия
+                    </label>
+                    <label for="4" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="4">
+                      Документооборот
+                    </label>
+                    <label for="5" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="5">
+                      Зарплата и управление персоналом
+                    </label>
+                    <label for="6" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="6">
+                      1С ERP
+                    </label>
+                    <label for="7" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="7">
+                      Управление торговлей
+                    </label>
+                    <label for="8" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="8">
+                      Комплексная автоматизация
+                    </label>
+                    <label for="9" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="9">
+                      Розница
+                    </label>
+                    <label for="10" class="checkbox">
+                      <input type="checkbox" class="price__form-checkbox" id="10">
+                      Другой
+                    </label>
+                  </div>
+                  <h3 class="price__form-title">4. Длительность проекта</h3>
+                  <input type="range" class="price__form-range" min="0" max="24" step="1">
+                </form>
+              </div>
+              </div>
+              <div class="price__item price__item_right">
+                <div class="price-container_right">
+                  <div class="price__item-wrapper">
+                    <h2 class="price__title title price__title_right">Итог</h2>
+                    <div class="price__item-content"></div>
+                    <button class="price__item-button button">Получить стоимость</button>
+                 </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       @@include('html/footer.html')
