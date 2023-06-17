@@ -1,3 +1,121 @@
 .footer {
+    background: #0E1423;
+    color: $white;
+    padding-bottom: 0;
+    &__logo {
+        display: block;
+        max-width: 303px;
+        margin-bottom: 56px;
+        @media screen and (max-width: 1440px) {
+            max-width: 242px;
+        }
+        @media screen and (max-width: 1280px) {
+            max-width: 212px;
+        }
+        @media screen and (max-width: $Small-l) {
+            max-width: 182px;
+            margin: 0 auto 50px;
+        }
+    }
 
+    &__logo-image {
+        
+    }
+
+    &__title {
+       margin-bottom: 33px;
+    }
+
+    &__items {
+        display: flex;
+        margin-bottom: 84px;
+        @media screen and (max-width: $Medium-s) {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        flex: 1 1 25%;
+        padding: 30px 53px;
+        border-right: 2px solid #B7B7B7;
+        @media screen and (max-width: 1440px) {
+            padding: 20px 35px;
+        }
+        @media screen and (max-width: $Medium) {
+            flex: 1 1 100%;
+            padding-left: 0;
+            border-bottom: 2px solid #B7B7B7;
+            border-right: 0;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            border-right: none;
+
+            @media screen and (max-width: $Medium) {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 30px;
+    }
+
+    &__item-paragraph {
+    }
+
+    &__socials {
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 574px) {
+            max-width: 274px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__social-image {
+        width: 52px;
+        height: 40px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__bottom {
+        background: #000;
+        padding: 12px 0;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__bottom-items {
+        display: flex;
+
+        @media screen and (max-width: $Small-l) {
+            flex-direction: column;
+        }
+    }
+
+    &__bottom-item {
+        margin-right: 16px;
+        @media screen and (max-width: $Small-l) {
+            margin-right: 0;
+        }
+        &:nth-child(1) {
+            max-width: 205px;
+            @media screen and (max-width: $Small-l) {
+                margin-bottom: 10px;
+            }
+        }
+        &:nth-child(2) > span {
+            margin-right: 16px;
+            @media screen and (max-width: 374px) {
+                display: block;
+            }
+        }
+    }
+
+    &__bottom-text {
+    }
 }
