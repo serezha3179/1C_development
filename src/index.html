@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-  @@include('html/head.html',{"title":"Главная"})
+<html lang="ru">
+  @@include('html/head.html',{"title":"Centicore Group"})
   <body>
     <div class="page">
       @@include('html/header.html')
       <main class="main">
-        <section class="group">
+        <section class="group" id="about">
           <div class="container">
             <div class="group__wrapper">
               <div class="group__items">
@@ -53,10 +53,10 @@
                 <p class="services__card-text">В процессе внедрения мы проводим проектирование бизнес-процессов и интегрируем необходимые функции в инфраструктуру предприятия</p>
               </div>
             </div>
-            <button class="services__button button">Забронировать консультацию</button>
+            <button class="services__button button" data-attribute="consultation">Забронировать консультацию</button>
           </div>
         </section>
-        <section class="expertise">
+        <section class="expertise" id="expertise">
           <div class="expertise-container">
             <h2 class="expertise__title title">Экспертиза в системе 1С:Предприятие</h2>
             <div class="expertise__cards">
@@ -134,7 +134,7 @@
                 </p>
                 <p class="advantages__paragraph">Свяжитесь с нами, чтобы узнать больше о том, как мы можем помочь вам оптимизировать и автоматизировать ваш бизнес с помощью услуг 1С. Мы всегда готовы ответить на любые вопросы и помочь вам выбрать наиболее подходящие для вашей компании решения.
                 </p>
-                <button class="advantages__button button">ЗАБРОНИРОВАТЬ КОНСУЛЬТАЦИЮ</button>
+                <button class="advantages__button button" data-attribute="consultation">ЗАБРОНИРОВАТЬ КОНСУЛЬТАЦИЮ</button>
               </div>
               <div class="advantages__item">
                 <div class="advantages__card">
@@ -180,7 +180,7 @@
                   <div class="consultation__item">
                     <p class="consultation__text">Независимо от сложности ИТ-проекта, наши профессиональные         бизнес-аналитики обеспечат наивысшее качество вашего продукта и помогут снизить затраты на     разработку
                     </p>
-                    <button class="consultation__button button">Свяжитесь с нами</button>
+                    <button class="consultation__button button" data-attribute="call">Свяжитесь с нами</button>
                   </div>
                   <div class="consultation__item">
                     <img src="@img/consultation/1С.png" alt="photograph of the number 1 and the letter c">
@@ -189,7 +189,7 @@
               </div>
           </div>
         </section>
-        <section class="outstaffing">
+        <section class="outstaffing" id="outstaffing">
           <div class="container">
             <h2 class="outstaffing__title title">Аутстафинг 1C специалистов</h2>
             <p class="outstaffing__paragraph">Наш процесс аутстаффинга 1С специалистов предоставляет возможность воспользоваться компетенциями опытных специалистов для реализации ваших проектов. Мы обеспечиваем удобную и эффективную коммуникацию с нашими разработчиками, которые вместе с вашей командой работают над проектом и выполняют поставленные задачи. Благодаря этому вы можете сократить затраты на поддержание своей собственной команды, а также получить доступ к многолетнему опыту наших специалистов.
@@ -229,10 +229,10 @@
                 </div>
               </div>
             </div>
-            <button class="outstaffing__button button">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
+            <button class="outstaffing__button button" data-attribute="price">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
           </div>
         </section>
-        <section class="modules">
+        <section class="modules" id="modules">
           <div class="container">
             <h2 class="modules__title title">Разработка модулей 1С</h2>
             <p class="modules__paragraph">Centicore Group предлагает услуги по разработке и доработке модулей систем 1С. Наши специалисты обладают необходимым опытом и знаниями, чтобы создать или улучшить функциональность системы для вашего бизнеса. Мы работаем с командой квалифицированных разработчиков, которые готовы реализовать любые задачи по индивидуальному плану работ. Мы гарантируем высокое качество выполненных задач, соблюдение сроков и конфиденциальность. Обратившись к нам, вы получите профессиональный и индивидуальный подход к разработке модулей, который поможет оптимизировать и автоматизировать бизнес-процессы вашей компании.</p>
@@ -253,10 +253,10 @@
                 <p class="modules__item-paragraph">Мы также работаем с существующей инфраструктурой 1С и помогаем компаниям улучшить.</p>
               </div>
             </div>
-            <button class="modules__button button">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
+            <button class="modules__button button" data-attribute="price">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
           </div>
         </section>
-        <section class="solutions">
+        <section class="solutions" id="solutions">
            <div class="container">
             <h2 class="solutions__title title">Внедрение решений 1С в предприятие</h2>
             <p class="solutions__paragraph">Centicore Group предлагает услуги по разработке и доработке модулей систем 1С. Наши специалисты обладают необходимым опытом и знаниями, чтобы создать или улучшить функциональность системы для вашего бизнеса. Мы работаем с командой квалифицированных разработчиков, которые готовы реализовать любые задачи по индивидуальному плану работ. Мы гарантируем высокое качество выполненных задач, соблюдение сроков и конфиденциальность. Обратившись к нам, вы получите профессиональный и индивидуальный подход к разработке модулей, который поможет оптимизировать и автоматизировать бизнес-процессы вашей компании.
@@ -273,10 +273,10 @@
               <h3 class="solutions__item-title">Трансформация бизнеса</h3>
               <p class="solutions__item-text">Мы помогаем внедрить современные разработки и перейти на новые технологические решения, которые повысят производительность вашего бизнеса.</p>
             </div>
-            <button class="solutions__button button">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
+            <button class="solutions__button button" data-attribute="price">РАССЧИТАТЬ СТОИМОСТЬ ПРОЕКТА</button>
            </div>
         </section>
-        <section class="description">
+        <section class="description" id="projects">
           <div class="container">
             <h2 class="description__title title">Что уже сделали? Описание проектов</h2>
             <div class="description__items-wrapper">
@@ -390,7 +390,7 @@
             </div>
           </div>
         </section>
-        <section class="price">
+        <section class="price" id="calculator">
           <div class="price__items">
               <div class="price__item price__item_left">
                 <div class="price-container_left">
@@ -399,41 +399,41 @@
                 <form action="index.html" class="price__form">
                   <h3 class="price__form-title">1. Выберете услугу</h3>
                   <div class="price__form-items is-form-radiobuttons-wrapper">
-                    <label for="outstaffing" class="label-service">
-                      <input type="radio" name="radio" class="price__form-input" id="outstaffing">
+                    <label for="input-outstaffing" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="input-outstaffing">
                       Аутстаффинг 1С специалистов
                     </label>
                     
-                    <label for="development" class="label-service">
-                      <input type="radio" name="radio" class="price__form-input" id="development"">
+                    <label for="input-development" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="input-development">
                       Разработка 1С модулей
                     </label>
                     
-                    <label for="solutions" class="label-service">
-                      <input type="radio" name="radio" class="price__form-input" id="solutions">
+                    <label for="input-solutions" class="label-service">
+                      <input type="radio" name="radio" class="price__form-input" id="input-solutions">
                       Внедрение решений 1С в предприятие
                     </label>
                   </div>
                   <h3 class="price__form-title">2. Команда</h3>
                   <div class="price__form-items is-form-buttons-wrapper">
-                    <label for="developers" class="price__form-item">
-                      <button id="buttonMinus" class="minus disabled">-</button>
+                    <div class="price__form-item">
+                      <button class="minus disabled">-</button>
                       <input type="text" value="0" id="developers" class="price__form-input_button">
-                      <button id="buttonPlus" class="plus">+</button>
+                      <button class="plus">+</button>
                       <span>Разработчики 1С</span>
-                    </label>
-                    <label for="architects" class="price__form-item">
-                      <button id="buttonMinus" class="minus disabled">-</button>
+                    </div>
+                    <div class="price__form-item">
+                      <button class="minus disabled">-</button>
                       <input type="text" value="0" id="architects" class="price__form-input_button">
-                      <button id="buttonPlus" class="plus">+</button>
+                      <button class="plus">+</button>
                       <span>Архитекторы 1С</span>
-                    </label>
-                    <label for="analysts" class="price__form-item">
-                      <button id="buttonMinus" class="minus disabled">-</button>
+                    </div>
+                    <div class="price__form-item">
+                      <button class="minus disabled">-</button>
                       <input type="text" value="0" id="analysts" class="price__form-input_button">
-                      <button id="buttonPlus" class="plus">+</button>
+                      <button class="plus">+</button>
                       <span>Аналитики 1С</span>
-                    </label>
+                    </div>
                   </div>
                   <h3 class="price__form-title">3. Продукты в системе 1С:Предприятие</h3>
                   <div class="price__form-items is-form-checkbox-wrapper">
@@ -524,14 +524,16 @@
                       <div class="items-wrapper item-products"></div>
                       <div class="items-wrapper item-range"></div>
                     </div>
-                    <button class="price__item-button button">Получить стоимость</button>
+                    <button class="price__item-button button" data-attribute="price">Получить стоимость</button>
               </div>
             </div>
           </div>
+        </div>
         </section>
       </main>
       @@include('html/footer.html')
     </div>
+    @@include('html/popup.html')
     <span class="button-top"></span>
     <script src="js/app.min.js"></script>
   </body>

@@ -6,13 +6,33 @@ if(document.querySelector('header')) {
 
     navigation.forEach(item=>item.addEventListener('click', (e)=> {
         e.preventDefault();
-        navigation.forEach(item=>item.classList.remove('active'));
-        item.classList.add('active');
+        navigation.forEach(item=>item.classList.remove('is-active'));
+        item.classList.add('is-active');
+        if(header.classList.contains('is-active')) {
+            getCoordinates(e, 'instant');
+            header.classList.remove('is-active');
+            headerBurger.classList.remove('is-active');
+            body.classList.remove('is-lock');
+            
+        } else {
+        getCoordinates(e,'smooth');
+        }
     }));
 
     headerBurger.addEventListener('click', ()=>{
-        headerBurger.classList.toggle('active');
-        header.classList.toggle('active');
-        body.classList.toggle('lock');
+        headerBurger.classList.toggle('is-active');
+        header.classList.toggle('is-active');
+        body.classList.toggle('is-lock');
     });
+
+    function getCoordinates(e,behavior) {
+        e.preventDefault();
+        let target = e.target.getAttribute('data-attribute');
+            let getSectionCoordinates = document.getElementById(`${target}`).offsetTop;
+            const headerHeight = document.querySelector('.header').clientHeight;
+            window.scrollTo({
+                top: getSectionCoordinates - headerHeight,
+                behavior: behavior
+            })
+    }
 }
