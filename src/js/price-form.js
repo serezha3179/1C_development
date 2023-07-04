@@ -123,7 +123,7 @@ if(document.querySelector('.price')) {
                     span.textContent = number;
                 let img = document.createElement('img');
                     img.className = 'is-deleteElement';
-                    img.setAttribute('src','../img/price/cross.png');
+                    img.setAttribute('src','img/price/cross.png');
                     img.style.display = 'inline-block';
                     img.style.marginLeft = "10px";
                     img.style.cursor = 'pointer';
